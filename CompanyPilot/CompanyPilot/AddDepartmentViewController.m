@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Suman Chatterjee. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AddDepartmentViewController.h"
 
-@interface ViewController ()
+@interface AddDepartmentViewController ()
 
 @end
 
-@implementation ViewController
+@implementation AddDepartmentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
