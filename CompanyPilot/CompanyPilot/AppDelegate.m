@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "NSManagedObjectContext+Helper.h"
+#import <CoreData/CoreData.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    //setup coredata
+    _persistentStoreCoordinator = [NSManagedObjectContext persistentStoreCoordinatorWithName:@"CompanyPilot"];
+
+    
     return YES;
 }
 
