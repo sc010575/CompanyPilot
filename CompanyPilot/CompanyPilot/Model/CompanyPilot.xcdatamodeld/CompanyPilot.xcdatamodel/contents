@@ -5,8 +5,17 @@
         <attribute name="departmentId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="departmentName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="departmentType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employee" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="department" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <entity name="Employee" syncable="YES">
+        <attribute name="employeeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="joiningDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="employee" inverseEntity="Department" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Department" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Department" positionX="117" positionY="215" width="128" height="118"/>
+        <element name="Employee" positionX="250" positionY="-1" width="128" height="118"/>
     </elements>
 </model>
