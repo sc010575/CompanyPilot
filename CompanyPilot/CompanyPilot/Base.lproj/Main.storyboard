@@ -67,51 +67,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter department name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHH-pc-arU">
-                                <rect key="frame" x="166" y="77" width="267" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="j5o-ZN-PZj"/>
-                                    <constraint firstAttribute="width" constant="267" id="tmK-LI-dEx"/>
-                                </constraints>
+                                <rect key="frame" x="94" y="51" width="412" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Department Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-Yj-gDj">
-                                <rect key="frame" x="66" y="159" width="162" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="162" id="6zw-xs-sma"/>
-                                    <constraint firstAttribute="height" constant="21" id="Tbr-d8-LXc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Department description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DH-dc-5AS">
+                                <rect key="frame" x="94" y="130" width="412" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99E-kd-hB9">
-                                <rect key="frame" x="200" y="210" width="200" height="222"/>
+                                <rect key="frame" x="150" y="190" width="300" height="222"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="222" id="Wwh-nA-WM1"/>
-                                    <constraint firstAttribute="width" constant="200" id="ch9-gJ-ROx"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8l-vI-JSd">
-                                <rect key="frame" x="200" y="498" width="200" height="30"/>
+                                <rect key="frame" x="200" y="300" width="200" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="BjE-zz-9o6"/>
-                                    <constraint firstAttribute="height" constant="30" id="sj7-dR-Klh"/>
+                                    <constraint firstAttribute="width" constant="200" id="7dw-Io-9o5"/>
                                 </constraints>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSaveDepartment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vtf-gS-sJN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94D-Ge-gFM">
-                                <rect key="frame" x="200" y="536" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Agn-HE-HCc"/>
-                                    <constraint firstAttribute="width" constant="200" id="RSI-Eq-hlz"/>
-                                </constraints>
+                                <rect key="frame" x="200" y="366" width="200" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,23 +106,34 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="99E-kd-hB9" firstAttribute="top" secondItem="8Sc-Yj-gDj" secondAttribute="bottom" constant="30" id="090-26-IKj"/>
-                            <constraint firstItem="8Sc-Yj-gDj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="FnZ-mj-GMs"/>
-                            <constraint firstAttribute="centerX" secondItem="99E-kd-hB9" secondAttribute="centerX" id="N2v-VZ-1NG"/>
-                            <constraint firstItem="F8l-vI-JSd" firstAttribute="top" secondItem="99E-kd-hB9" secondAttribute="bottom" constant="66" id="P4I-rZ-jmZ"/>
-                            <constraint firstItem="8Sc-Yj-gDj" firstAttribute="top" secondItem="tHH-pc-arU" secondAttribute="bottom" constant="52" id="RQD-N9-wtD"/>
-                            <constraint firstAttribute="centerX" secondItem="tHH-pc-arU" secondAttribute="centerX" id="XWe-uV-6hD"/>
-                            <constraint firstItem="94D-Ge-gFM" firstAttribute="top" secondItem="F8l-vI-JSd" secondAttribute="bottom" constant="8" symbolic="YES" id="f17-c3-ZvO"/>
-                            <constraint firstAttribute="centerX" secondItem="F8l-vI-JSd" secondAttribute="centerX" id="lYj-Dl-jpV"/>
-                            <constraint firstAttribute="centerX" secondItem="94D-Ge-gFM" secondAttribute="centerX" id="sfJ-qQ-qe0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Sc-Yj-gDj" secondAttribute="trailing" constant="356" id="t0x-C1-3jh"/>
-                            <constraint firstItem="tHH-pc-arU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="tCu-Wd-LFj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="94D-Ge-gFM" secondAttribute="bottom" constant="204" id="20J-zc-CeQ"/>
+                            <constraint firstItem="6DH-dc-5AS" firstAttribute="centerX" secondItem="94D-Ge-gFM" secondAttribute="centerX" id="4LN-gf-aYo"/>
+                            <constraint firstItem="94D-Ge-gFM" firstAttribute="top" secondItem="F8l-vI-JSd" secondAttribute="bottom" constant="36" id="Hda-6B-W0g"/>
+                            <constraint firstAttribute="centerX" secondItem="F8l-vI-JSd" secondAttribute="centerX" id="JKe-F2-he0"/>
+                            <constraint firstAttribute="centerX" secondItem="tHH-pc-arU" secondAttribute="centerX" id="SYj-Gl-1sL"/>
+                            <constraint firstItem="6DH-dc-5AS" firstAttribute="leading" secondItem="tHH-pc-arU" secondAttribute="leading" id="UuA-wU-K4i"/>
+                            <constraint firstAttribute="centerX" secondItem="6DH-dc-5AS" secondAttribute="centerX" id="Xcl-wc-Jfz"/>
+                            <constraint firstItem="6DH-dc-5AS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78" id="jz8-HY-Fbt"/>
+                            <constraint firstItem="6DH-dc-5AS" firstAttribute="top" secondItem="tHH-pc-arU" secondAttribute="bottom" constant="49" id="pKz-Ey-cWw"/>
+                            <constraint firstAttribute="centerX" secondItem="tHH-pc-arU" secondAttribute="centerX" id="uMu-ct-3Xj"/>
+                            <constraint firstItem="94D-Ge-gFM" firstAttribute="leading" secondItem="F8l-vI-JSd" secondAttribute="leading" id="wlE-2Q-kBi"/>
+                            <constraint firstItem="6DH-dc-5AS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="130" id="z9A-u6-sfV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="99E-kd-hB9"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="departmentDescriptionTF" destination="6DH-dc-5AS" id="yTR-bH-dvt"/>
+                        <outlet property="departmentNameTF" destination="tHH-pc-arU" id="qk9-3V-HKD"/>
+                        <outlet property="saveBtn" destination="F8l-vI-JSd" id="iU3-RE-24m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799" y="-653"/>
+            <point key="canvasLocation" x="1759" y="-653"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
