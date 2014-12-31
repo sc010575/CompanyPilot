@@ -143,6 +143,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSave:" destination="eN9-Bf-k0R" eventType="touchUpInside" id="L60-l2-JaY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,6 +158,11 @@
                             <constraint firstAttribute="centerX" secondItem="Hd8-sr-2hO" secondAttribute="centerX" id="z8m-jt-74q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNameTF" destination="Hd8-sr-2hO" id="AMp-zb-hGf"/>
+                        <outlet property="lastNameTF" destination="JN4-ok-sAU" id="R7x-zH-zag"/>
+                        <outlet property="saveBtn" destination="qCO-Sa-xhx" id="1X1-3j-hYK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0r-YW-hAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

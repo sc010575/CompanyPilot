@@ -33,7 +33,7 @@
     // Get the new view controller using [segue destinationViewController].
     if ([segue.identifier isEqualToString:@"addEmployee"]){
         AddEmployeeViewController *destination = [segue destinationViewController];
-        destination.dept = self.dept;
+        destination.deptName = self.dept.departmentName;
     }
 }
 

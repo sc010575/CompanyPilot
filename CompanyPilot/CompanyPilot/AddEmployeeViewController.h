@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Department.h"
 
 @interface AddEmployeeViewController : UIViewController
 
-@property (strong, nonatomic) Department *dept;
+@property (strong, nonatomic) NSString *deptName;
 
 @end

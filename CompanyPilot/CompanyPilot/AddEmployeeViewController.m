@@ -7,8 +7,20 @@
 //
 
 #import "AddEmployeeViewController.h"
+#import "NSManagedObjectContext+Helper.h"
+#import "NSManagedObject+CoreDataHandler.h"
+#import "AppDelegate.h"
+#import "Employee.h"
+#import "Department.h"
 
-@interface AddEmployeeViewController ()
+
+@interface AddEmployeeViewController ()<UITextFieldDelegate>
+
+@property (strong, nonatomic) NSManagedObjectContext * managedObjectContext;
+@property (weak, nonatomic) IBOutlet UITextField *firstNameTF;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameTF;
+@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
+- (IBAction)onSave:(id)sender;
 
 @end
 
@@ -16,7 +28,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //Use the main persistentStoreCoordinator
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [NSManagedObjectContext managedObjectContextWithStoreCoordinator:appDelegate.persistentStoreCoordinator];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +39,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onSave:(id)sender {
+ 
+    [self saveEmployee];
+    
 }
-*/
+
+- (void)saveEmployee
+{
+    
+    [self.managedObjectContext updateOnBackgroundThread:^(NSManagedObjectContext *updateContext) {
+
+    //OK new event add it to the database
+    Employee *employee = [Employee createInContext:updateContext];
+    NSUInteger empId = [Employee countInContext:updateContext];
+    employee.employeeId = [NSNumber numberWithInteger:empId + 1];
+    employee.joiningDate = [NSDate date];
+    employee.employFirstName = self.firstNameTF.text;
+    employee.employeeLastName = self.lastNameTF.text;
+        
+    NSPredicate *purchasePredicate = [NSPredicate predicateWithFormat:@"departmentName == %@", self.deptName];
+    Department * dept = [[Department findAllWithPredicate:purchasePredicate inContext:updateContext]  firstObject];
+
+    employee.department = dept;
+     } completion:^{
+         //complete
+         NSLog(@"Employee added");
+     }];
+
+}
+
+#pragma mark - UITextfield delegate
+
+- (BOOL) textFieldShouldReturn: (UITextField *)textField
+{
+    if (textField == self.lastNameTF) {
+        [textField resignFirstResponder];
+    }
+    return YES;
+}
+
+
 
 @end
