@@ -1,24 +1,22 @@
 //
-//  DepartmentDetailsViewController.m
+//  AddEmployeeViewController.m
 //  CompanyPilot
 //
 //  Created by Suman Chatterjee on 31/12/2014.
 //  Copyright (c) 2014 Suman Chatterjee. All rights reserved.
 //
 
-#import "DepartmentDetailsViewController.h"
 #import "AddEmployeeViewController.h"
 
-@interface DepartmentDetailsViewController ()
+@interface AddEmployeeViewController ()
 
 @end
 
-@implementation DepartmentDetailsViewController
+@implementation AddEmployeeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.dept.departmentName;
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,17 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
-    if ([segue.identifier isEqualToString:@"addEmployee"]){
-        AddEmployeeViewController *destination = [segue destinationViewController];
-        destination.dept = self.dept;
-    }
+    // Pass the selected object to the new view controller.
 }
-
-
+*/
 
 @end

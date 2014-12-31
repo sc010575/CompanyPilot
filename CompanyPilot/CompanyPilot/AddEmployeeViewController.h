@@ -1,5 +1,5 @@
 //
-//  DepartmentDetailsViewController.h
+//  AddEmployeeViewController.h
 //  CompanyPilot
 //
 //  Created by Suman Chatterjee on 31/12/2014.
@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Department.h"
 
-@interface DepartmentDetailsViewController : UIViewController
+@interface AddEmployeeViewController : UIViewController
 
-@property (nonatomic, strong) Department *dept;
+@property (strong, nonatomic) Department *dept;
 
 @end

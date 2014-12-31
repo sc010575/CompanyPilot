@@ -55,7 +55,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJ8-yD-vR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-162"/>
+            <point key="canvasLocation" x="1540" y="-898"/>
         </scene>
         <!--Department Details View Controller-->
         <scene sceneID="hMa-PS-HQQ">
@@ -69,42 +69,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYy-bd-iUK">
-                                <rect key="frame" x="193" y="120" width="158" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYy-bd-iUK">
+                                <rect key="frame" x="221" y="164" width="158" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jeA-Ow-vDR"/>
-                                    <constraint firstAttribute="width" constant="158" id="n7L-FO-ylJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="dTM-f8-9bp"/>
+                                    <constraint firstAttribute="width" constant="158" id="jHX-FH-Q4H"/>
                                 </constraints>
                                 <state key="normal" title="Show Employee">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-at-xUe">
-                                <rect key="frame" x="193" y="293" width="158" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="qXU-qg-z8e"/>
-                                    <constraint firstAttribute="width" constant="158" id="vd9-C4-X6f"/>
-                                </constraints>
+                                <rect key="frame" x="221" y="234" width="158" height="30"/>
                                 <state key="normal" title="Add Employee">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eN9-Bf-k0R" kind="show" identifier="addEmployee" id="3NC-DW-bIQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nmc-at-xUe" firstAttribute="centerX" secondItem="RYy-bd-iUK" secondAttribute="centerX" id="BNQ-J1-DCu"/>
-                            <constraint firstItem="RYy-bd-iUK" firstAttribute="top" secondItem="VLT-99-2JH" secondAttribute="bottom" constant="100" id="FHB-zU-T2w"/>
-                            <constraint firstItem="ofM-gW-ZPU" firstAttribute="top" secondItem="nmc-at-xUe" secondAttribute="bottom" constant="277" id="IUa-eZ-68I"/>
-                            <constraint firstAttribute="trailing" secondItem="nmc-at-xUe" secondAttribute="trailing" constant="249" id="MAy-S7-qYa"/>
-                            <constraint firstItem="RYy-bd-iUK" firstAttribute="width" secondItem="nmc-at-xUe" secondAttribute="width" id="OC6-BB-xtg"/>
-                            <constraint firstItem="RYy-bd-iUK" firstAttribute="height" secondItem="nmc-at-xUe" secondAttribute="height" id="SBc-1y-IXo"/>
+                            <constraint firstItem="nmc-at-xUe" firstAttribute="top" secondItem="RYy-bd-iUK" secondAttribute="bottom" constant="40" id="EYC-kb-jsk"/>
+                            <constraint firstAttribute="centerX" secondItem="RYy-bd-iUK" secondAttribute="centerX" id="GEf-gh-leC"/>
+                            <constraint firstItem="RYy-bd-iUK" firstAttribute="leading" secondItem="nmc-at-xUe" secondAttribute="leading" id="Gen-6d-Nfi"/>
+                            <constraint firstItem="RYy-bd-iUK" firstAttribute="trailing" secondItem="nmc-at-xUe" secondAttribute="trailing" id="WQD-vs-94Y"/>
+                            <constraint firstItem="RYy-bd-iUK" firstAttribute="top" secondItem="VLT-99-2JH" secondAttribute="bottom" constant="100" id="yb2-sd-9fd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kif-dP-avf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjI-6d-O2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="309"/>
+            <point key="canvasLocation" x="2277" y="-904"/>
+        </scene>
+        <!--Add Employee View Controller-->
+        <scene sceneID="hK6-Bs-6wY">
+            <objects>
+                <viewController id="eN9-Bf-k0R" customClass="AddEmployeeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="piL-xq-UCD"/>
+                        <viewControllerLayoutGuide type="bottom" id="yBS-Wv-mWF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ojG-41-qkz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hd8-sr-2hO">
+                                <rect key="frame" x="170" y="123" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eWS-P1-2WT"/>
+                                    <constraint firstAttribute="width" constant="260" id="ieJ-eR-ACR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JN4-ok-sAU">
+                                <rect key="frame" x="170" y="241" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="Cee-TH-atn"/>
+                                    <constraint firstAttribute="height" constant="30" id="aSx-SE-iwP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCO-Sa-xhx">
+                                <rect key="frame" x="230" y="346" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Oau-uY-nPY"/>
+                                    <constraint firstAttribute="width" constant="140" id="V7x-kb-50I"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="JN4-ok-sAU" secondAttribute="centerX" id="EQX-Xc-RYf"/>
+                            <constraint firstItem="yBS-Wv-mWF" firstAttribute="top" secondItem="qCO-Sa-xhx" secondAttribute="bottom" constant="224" id="EoT-oH-K6p"/>
+                            <constraint firstAttribute="centerX" secondItem="qCO-Sa-xhx" secondAttribute="centerX" id="M3R-yX-KsP"/>
+                            <constraint firstItem="Hd8-sr-2hO" firstAttribute="top" secondItem="piL-xq-UCD" secondAttribute="bottom" constant="59" id="PYn-tU-PqG"/>
+                            <constraint firstItem="qCO-Sa-xhx" firstAttribute="top" secondItem="JN4-ok-sAU" secondAttribute="bottom" constant="75" id="dMV-BP-sRf"/>
+                            <constraint firstAttribute="centerX" secondItem="Hd8-sr-2hO" secondAttribute="centerX" id="z8m-jt-74q"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0r-YW-hAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2914" y="-904"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yKb-eM-gJp">
@@ -202,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="-373"/>
+            <point key="canvasLocation" x="915" y="-141"/>
         </scene>
     </scenes>
 </document>

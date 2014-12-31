@@ -24,6 +24,7 @@
 		C5C5B37C1A52E3C50076D7B6 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B37B1A52E3C50076D7B6 /* Employee.m */; };
 		C5C5B3801A53235B0076D7B6 /* DepartmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B37F1A53235B0076D7B6 /* DepartmentTableViewCell.m */; };
 		C5C5B3831A5409440076D7B6 /* DepartmentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B3821A5409440076D7B6 /* DepartmentDetailsViewController.m */; };
+		C5C5B3861A543D080076D7B6 /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B3851A543D080076D7B6 /* AddEmployeeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		C5C5B37F1A53235B0076D7B6 /* DepartmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DepartmentTableViewCell.m; sourceTree = "<group>"; };
 		C5C5B3811A5409440076D7B6 /* DepartmentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepartmentDetailsViewController.h; sourceTree = "<group>"; };
 		C5C5B3821A5409440076D7B6 /* DepartmentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DepartmentDetailsViewController.m; sourceTree = "<group>"; };
+		C5C5B3841A543D080076D7B6 /* AddEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEmployeeViewController.h; sourceTree = "<group>"; };
+		C5C5B3851A543D080076D7B6 /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				C5C5B3391A4D632D0076D7B6 /* AddDepartmentViewController.m */,
 				C5C5B3811A5409440076D7B6 /* DepartmentDetailsViewController.h */,
 				C5C5B3821A5409440076D7B6 /* DepartmentDetailsViewController.m */,
+				C5C5B3841A543D080076D7B6 /* AddEmployeeViewController.h */,
+				C5C5B3851A543D080076D7B6 /* AddEmployeeViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				C5C5B3341A4D632D0076D7B6 /* main.m in Sources */,
 				C5C5B3621A4EA5010076D7B6 /* CoreDataErrorHandling.m in Sources */,
 				C5C5B3791A52E3C40076D7B6 /* Department.m in Sources */,
+				C5C5B3861A543D080076D7B6 /* AddEmployeeViewController.m in Sources */,
 				C5C5B3831A5409440076D7B6 /* DepartmentDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
