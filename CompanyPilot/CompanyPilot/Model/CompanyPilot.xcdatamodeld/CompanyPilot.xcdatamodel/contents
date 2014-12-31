@@ -2,13 +2,13 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Department" representedClassName="Department" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="departmentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departmentId" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="departmentName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="departmentType" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="employee" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="department" inverseEntity="Employee" syncable="YES"/>
     </entity>
     <entity name="Employee" representedClassName="Employee" syncable="YES">
-        <attribute name="employeeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeId" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="employeeLastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="employFirstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="joiningDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -16,6 +16,6 @@
     </entity>
     <elements>
         <element name="Department" positionX="117" positionY="215" width="128" height="118"/>
-        <element name="Employee" positionX="250" positionY="-1" width="128" height="118"/>
+        <element name="Employee" positionX="412" positionY="71" width="128" height="118"/>
     </elements>
 </model>

@@ -2,11 +2,12 @@
 //  Department.m
 //  CompanyPilot
 //
-//  Created by Suman Chatterjee on 27/12/2014.
+//  Created by Suman Chatterjee on 30/12/2014.
 //  Copyright (c) 2014 Suman Chatterjee. All rights reserved.
 //
 
 #import "Department.h"
+#import "Employee.h"
 
 
 @implementation Department

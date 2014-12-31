@@ -19,9 +19,11 @@
 		C5C5B3631A4EA5010076D7B6 /* NSManagedObject+CoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B35F1A4EA5010076D7B6 /* NSManagedObject+CoreDataHandler.m */; };
 		C5C5B3641A4EA5010076D7B6 /* NSManagedObjectContext+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B3611A4EA5010076D7B6 /* NSManagedObjectContext+Helper.m */; };
 		C5C5B3681A4EA5730076D7B6 /* CompanyPilot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B3661A4EA5730076D7B6 /* CompanyPilot.xcdatamodeld */; };
-		C5C5B36B1A4EABA50076D7B6 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B36A1A4EABA50076D7B6 /* Department.m */; };
-		C5C5B36E1A4EABA60076D7B6 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B36D1A4EABA60076D7B6 /* Employee.m */; };
 		C5C5B3701A4EACC40076D7B6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C5B36F1A4EACC40076D7B6 /* CoreData.framework */; };
+		C5C5B3791A52E3C40076D7B6 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B3781A52E3C40076D7B6 /* Department.m */; };
+		C5C5B37C1A52E3C50076D7B6 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B37B1A52E3C50076D7B6 /* Employee.m */; };
+		C5C5B3801A53235B0076D7B6 /* DepartmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B37F1A53235B0076D7B6 /* DepartmentTableViewCell.m */; };
+		C5C5B3831A5409440076D7B6 /* DepartmentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B3821A5409440076D7B6 /* DepartmentDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +59,15 @@
 		C5C5B3601A4EA5010076D7B6 /* NSManagedObjectContext+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Helper.h"; sourceTree = "<group>"; };
 		C5C5B3611A4EA5010076D7B6 /* NSManagedObjectContext+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Helper.m"; sourceTree = "<group>"; };
 		C5C5B3671A4EA5730076D7B6 /* CompanyPilot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CompanyPilot.xcdatamodel; sourceTree = "<group>"; };
-		C5C5B3691A4EABA50076D7B6 /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Department.h; sourceTree = "<group>"; };
-		C5C5B36A1A4EABA50076D7B6 /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Department.m; sourceTree = "<group>"; };
-		C5C5B36C1A4EABA60076D7B6 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
-		C5C5B36D1A4EABA60076D7B6 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		C5C5B36F1A4EACC40076D7B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C5C5B3771A52E3C40076D7B6 /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Department.h; sourceTree = "<group>"; };
+		C5C5B3781A52E3C40076D7B6 /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Department.m; sourceTree = "<group>"; };
+		C5C5B37A1A52E3C50076D7B6 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		C5C5B37B1A52E3C50076D7B6 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		C5C5B37E1A53235A0076D7B6 /* DepartmentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepartmentTableViewCell.h; sourceTree = "<group>"; };
+		C5C5B37F1A53235B0076D7B6 /* DepartmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DepartmentTableViewCell.m; sourceTree = "<group>"; };
+		C5C5B3811A5409440076D7B6 /* DepartmentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepartmentDetailsViewController.h; sourceTree = "<group>"; };
+		C5C5B3821A5409440076D7B6 /* DepartmentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DepartmentDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +116,6 @@
 				C5C5B35A1A4D63D90076D7B6 /* Views */,
 				C5C5B3351A4D632D0076D7B6 /* AppDelegate.h */,
 				C5C5B3361A4D632D0076D7B6 /* AppDelegate.m */,
-				C5C5B3381A4D632D0076D7B6 /* AddDepartmentViewController.h */,
-				C5C5B3391A4D632D0076D7B6 /* AddDepartmentViewController.m */,
 				C5C5B33B1A4D632D0076D7B6 /* Main.storyboard */,
 				C5C5B33E1A4D632D0076D7B6 /* Images.xcassets */,
 				C5C5B3401A4D632D0076D7B6 /* LaunchScreen.xib */,
@@ -149,8 +153,13 @@
 		C5C5B35A1A4D63D90076D7B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5C5B37D1A53231B0076D7B6 /* TableViewCell */,
 				C5C5B3571A4D63CE0076D7B6 /* DepartmentTableViewController.h */,
 				C5C5B3581A4D63CE0076D7B6 /* DepartmentTableViewController.m */,
+				C5C5B3381A4D632D0076D7B6 /* AddDepartmentViewController.h */,
+				C5C5B3391A4D632D0076D7B6 /* AddDepartmentViewController.m */,
+				C5C5B3811A5409440076D7B6 /* DepartmentDetailsViewController.h */,
+				C5C5B3821A5409440076D7B6 /* DepartmentDetailsViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -171,14 +180,23 @@
 		C5C5B3651A4EA55A0076D7B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C5C5B37A1A52E3C50076D7B6 /* Employee.h */,
+				C5C5B37B1A52E3C50076D7B6 /* Employee.m */,
+				C5C5B3771A52E3C40076D7B6 /* Department.h */,
+				C5C5B3781A52E3C40076D7B6 /* Department.m */,
 				C5C5B3661A4EA5730076D7B6 /* CompanyPilot.xcdatamodeld */,
-				C5C5B36C1A4EABA60076D7B6 /* Employee.h */,
-				C5C5B36D1A4EABA60076D7B6 /* Employee.m */,
-				C5C5B3691A4EABA50076D7B6 /* Department.h */,
-				C5C5B36A1A4EABA50076D7B6 /* Department.m */,
 			);
 			name = Model;
 			path = CompanyPilot/Model;
+			sourceTree = "<group>";
+		};
+		C5C5B37D1A53231B0076D7B6 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C5C5B37E1A53235A0076D7B6 /* DepartmentTableViewCell.h */,
+				C5C5B37F1A53235B0076D7B6 /* DepartmentTableViewCell.m */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,15 +300,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C5B3681A4EA5730076D7B6 /* CompanyPilot.xcdatamodeld in Sources */,
+				C5C5B3801A53235B0076D7B6 /* DepartmentTableViewCell.m in Sources */,
 				C5C5B33A1A4D632D0076D7B6 /* AddDepartmentViewController.m in Sources */,
 				C5C5B3641A4EA5010076D7B6 /* NSManagedObjectContext+Helper.m in Sources */,
 				C5C5B3591A4D63CE0076D7B6 /* DepartmentTableViewController.m in Sources */,
 				C5C5B3371A4D632D0076D7B6 /* AppDelegate.m in Sources */,
-				C5C5B36E1A4EABA60076D7B6 /* Employee.m in Sources */,
+				C5C5B37C1A52E3C50076D7B6 /* Employee.m in Sources */,
 				C5C5B3631A4EA5010076D7B6 /* NSManagedObject+CoreDataHandler.m in Sources */,
 				C5C5B3341A4D632D0076D7B6 /* main.m in Sources */,
 				C5C5B3621A4EA5010076D7B6 /* CoreDataErrorHandling.m in Sources */,
-				C5C5B36B1A4EABA50076D7B6 /* Department.m in Sources */,
+				C5C5B3791A52E3C40076D7B6 /* Department.m in Sources */,
+				C5C5B3831A5409440076D7B6 /* DepartmentDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CompanyPilot/AddDepartmentViewController.m"
-            timestampString = "441585113.635822"
+            filePath = "CompanyPilot/CoreDataHandler/NSManagedObject+CoreDataHandler.m"
+            timestampString = "441629379.750574"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "-saveDepartment:"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "+countInContext:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,5 +12,6 @@
 
 + (id) createInContext:(NSManagedObjectContext *)context;
 + (NSArray *) findAllWithPredicate:(NSPredicate *)searchTerm inContext:(NSManagedObjectContext *)context;
++ (NSInteger) countInContext:(NSManagedObjectContext *)context;
 
 @end

@@ -9,16 +9,35 @@
         <scene sceneID="fOM-Vt-QUH">
             <objects>
                 <tableViewController storyboardIdentifier="Department" id="trE-ec-aDN" customClass="DepartmentTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IfA-Uj-mK5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="IfA-Uj-mK5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DZk-V5-Vht">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DepartmentTableViewCell" rowHeight="100" id="DZk-V5-Vht" customClass="DepartmentTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DZk-V5-Vht" id="YfZ-jE-7Pe">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-Lb-K1l">
+                                            <rect key="frame" x="99" y="26" width="183" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-xj-f0o">
+                                            <rect key="frame" x="99" y="63" width="246" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="department" destination="6ov-Lb-K1l" id="qY6-3Y-Qjn"/>
+                                    <outlet property="type" destination="3b3-xj-f0o" id="gnJ-by-IhY"/>
+                                    <segue destination="Exy-XR-Rjh" kind="show" identifier="departmentDetailsID" id="WiU-rb-h9T"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,14 +48,63 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="5vd-3O-JJB">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="b3f-B0-7j8">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="CancelEntry" id="uo0-cL-MC3"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="addDepartment" id="wTN-kL-jOY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJ8-yD-vR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="679" y="228"/>
+            <point key="canvasLocation" x="836" y="-162"/>
+        </scene>
+        <!--Department Details View Controller-->
+        <scene sceneID="hMa-PS-HQQ">
+            <objects>
+                <viewController id="Exy-XR-Rjh" customClass="DepartmentDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VLT-99-2JH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ofM-gW-ZPU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3DE-zr-q4K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYy-bd-iUK">
+                                <rect key="frame" x="193" y="120" width="158" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jeA-Ow-vDR"/>
+                                    <constraint firstAttribute="width" constant="158" id="n7L-FO-ylJ"/>
+                                </constraints>
+                                <state key="normal" title="Show Employee">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-at-xUe">
+                                <rect key="frame" x="193" y="293" width="158" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qXU-qg-z8e"/>
+                                    <constraint firstAttribute="width" constant="158" id="vd9-C4-X6f"/>
+                                </constraints>
+                                <state key="normal" title="Add Employee">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nmc-at-xUe" firstAttribute="centerX" secondItem="RYy-bd-iUK" secondAttribute="centerX" id="BNQ-J1-DCu"/>
+                            <constraint firstItem="RYy-bd-iUK" firstAttribute="top" secondItem="VLT-99-2JH" secondAttribute="bottom" constant="100" id="FHB-zU-T2w"/>
+                            <constraint firstItem="ofM-gW-ZPU" firstAttribute="top" secondItem="nmc-at-xUe" secondAttribute="bottom" constant="277" id="IUa-eZ-68I"/>
+                            <constraint firstAttribute="trailing" secondItem="nmc-at-xUe" secondAttribute="trailing" constant="249" id="MAy-S7-qYa"/>
+                            <constraint firstItem="RYy-bd-iUK" firstAttribute="width" secondItem="nmc-at-xUe" secondAttribute="width" id="OC6-BB-xtg"/>
+                            <constraint firstItem="RYy-bd-iUK" firstAttribute="height" secondItem="nmc-at-xUe" secondAttribute="height" id="SBc-1y-IXo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kif-dP-avf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjI-6d-O2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="309"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yKb-eM-gJp">
@@ -100,7 +168,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="trE-ec-aDN" kind="presentation" modalPresentationStyle="formSheet" id="BGK-yO-KQ9"/>
+                                    <action selector="onCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oNH-uK-cCD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,6 +194,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cancelBtn" destination="94D-Ge-gFM" id="J6X-RO-ZKn"/>
                         <outlet property="departmentDescriptionTF" destination="6DH-dc-5AS" id="yTR-bH-dvt"/>
                         <outlet property="departmentNameTF" destination="tHH-pc-arU" id="qk9-3V-HKD"/>
                         <outlet property="saveBtn" destination="F8l-vI-JSd" id="iU3-RE-24m"/>
@@ -133,10 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="-653"/>
+            <point key="canvasLocation" x="1579" y="-373"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="BGK-yO-KQ9"/>
-    </inferredMetricsTieBreakers>
 </document>

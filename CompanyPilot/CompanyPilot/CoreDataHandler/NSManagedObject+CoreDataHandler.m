@@ -66,5 +66,17 @@
                               inContext:context];
 }
 
++ (NSInteger) countInContext:(NSManagedObjectContext *)context
+{
+    NSUInteger count = 0;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext *managedObjectContext = context;
+    [request setEntity:[self entityDescriptionInContext:context]];
+    
+    NSError *error = nil;
+    count = [managedObjectContext countForFetchRequest:request error:&error];
+    return (count - 1);
+    
+}
 
 @end
